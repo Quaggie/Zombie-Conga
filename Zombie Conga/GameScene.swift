@@ -54,8 +54,10 @@ class GameScene: SKScene {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
         if let touch = touches.first {
             let touchLocation = touch.location(in: self)
+            lastTouchLocation = touchLocation
             sceneTouched(touchLocation: touchLocation)
         }
     }
@@ -63,7 +65,15 @@ class GameScene: SKScene {
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
             let touchLocation = touch.location(in: self)
+            lastTouchLocation = touchLocation
             sceneTouched(touchLocation: touchLocation)
+        }
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let touch = touches.first {
+            let touchLocation = touch.location(in: self)
+            lastTouchLocation = touchLocation
         }
     }
     
@@ -75,9 +85,21 @@ class GameScene: SKScene {
         }
         lastUpdateTime = currentTime
         
-        moveSprite(zombie, velocity: velocity)
+        if let lastTouchLocation = lastTouchLocation {
+            let offset = lastTouchLocation - zombie.position
+            let distance = offset.length()
+            if distance <= (CGFloat(dt) * zombieMovePointsPerSec) {
+                zombie.position = lastTouchLocation
+                velocity = .zero
+            } else {
+                moveSprite(zombie, velocity: velocity)
+                rotateSprite(zombie, direction: velocity)
+            }
+        } else {
+            moveSprite(zombie, velocity: velocity)
+            rotateSprite(zombie, direction: velocity)
+        }
         boundsCheckZombie()
-        rotateSprite(zombie, direction: velocity)
     }
     
     func moveSprite(_ sprite: SKSpriteNode, velocity: CGPoint) {
