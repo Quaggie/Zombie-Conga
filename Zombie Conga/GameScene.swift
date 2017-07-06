@@ -10,80 +10,128 @@ import SpriteKit
 import GameplayKit
 
 class GameScene: SKScene {
+    let background = SKSpriteNode(imageNamed: "background1")
+    let zombie = SKSpriteNode(imageNamed: "zombie1")
+    let playableRect: CGRect
     
-    private var label : SKLabelNode?
-    private var spinnyNode : SKShapeNode?
+    var lastUpdateTime: TimeInterval = 0
+    var dt: TimeInterval = 0
+    var lastTouchLocation: CGPoint?
+    
+    let zombieMovePointsPerSec: CGFloat = 480.0
+    var velocity: CGPoint = .zero
+    
+    override init(size: CGSize) {
+        let maxAspectRatio:CGFloat = 16.0 / 9.0
+        let playableHeight = size.width / maxAspectRatio
+        let playableMargin = (size.height-playableHeight) / 2.0
+        playableRect = CGRect(x: 0, y: playableMargin, width: size.width, height: playableHeight)
+        super.init(size: size)
+    }
+    required init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func debugDrawPlayableArea() {
+        let shape = SKShapeNode()
+        let path = CGMutablePath()
+        path.addRect(playableRect)
+        shape.path = path
+        shape.strokeColor = SKColor.red
+        shape.lineWidth = 4.0
+        addChild(shape)
+    }
     
     override func didMove(to view: SKView) {
+        background.zPosition = -1
+        background.position = CGPoint(x: size.width / 2, y: size.height / 2)
+        addChild(background)
         
-        // Get label node from scene and store it for use later
-        self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode
-        if let label = self.label {
-            label.alpha = 0.0
-            label.run(SKAction.fadeIn(withDuration: 2.0))
-        }
+        zombie.position = CGPoint(x: 400, y: 400)
+        addChild(zombie)
         
-        // Create shape node to use during mouse interaction
-        let w = (self.size.width + self.size.height) * 0.05
-        self.spinnyNode = SKShapeNode.init(rectOf: CGSize.init(width: w, height: w), cornerRadius: w * 0.3)
-        
-        if let spinnyNode = self.spinnyNode {
-            spinnyNode.lineWidth = 2.5
-            
-            spinnyNode.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(Double.pi), duration: 1)))
-            spinnyNode.run(SKAction.sequence([SKAction.wait(forDuration: 0.5),
-                                              SKAction.fadeOut(withDuration: 0.5),
-                                              SKAction.removeFromParent()]))
-        }
-    }
-    
-    
-    func touchDown(atPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.green
-            self.addChild(n)
-        }
-    }
-    
-    func touchMoved(toPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.blue
-            self.addChild(n)
-        }
-    }
-    
-    func touchUp(atPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.red
-            self.addChild(n)
-        }
+        debugDrawPlayableArea()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let label = self.label {
-            label.run(SKAction.init(named: "Pulse")!, withKey: "fadeInOut")
+        if let touch = touches.first {
+            let touchLocation = touch.location(in: self)
+            sceneTouched(touchLocation: touchLocation)
         }
-        
-        for t in touches { self.touchDown(atPoint: t.location(in: self)) }
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchMoved(toPoint: t.location(in: self)) }
+        if let touch = touches.first {
+            let touchLocation = touch.location(in: self)
+            sceneTouched(touchLocation: touchLocation)
+        }
     }
-    
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchUp(atPoint: t.location(in: self)) }
-    }
-    
-    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchUp(atPoint: t.location(in: self)) }
-    }
-    
     
     override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
+        if lastUpdateTime > 0 {
+            dt = currentTime - lastUpdateTime
+        } else {
+            dt = 0
+        }
+        lastUpdateTime = currentTime
+        
+        moveSprite(zombie, velocity: velocity)
+        boundsCheckZombie()
+        rotateSprite(zombie, direction: velocity)
+    }
+    
+    func moveSprite(_ sprite: SKSpriteNode, velocity: CGPoint) {
+        let amountToMove = velocity * CGFloat(dt)
+        print("Amount to move: \(amountToMove)")
+        sprite.position += amountToMove
+    }
+    
+    func moveZombieToward(location: CGPoint) {
+        let offset = location - zombie.position
+        let length = offset.length()
+        let direction = offset / length
+        velocity = direction * zombieMovePointsPerSec
+    }
+    
+    func sceneTouched(touchLocation: CGPoint) {
+        moveZombieToward(location: touchLocation)
+    }
+    
+    func boundsCheckZombie() {
+        let bottomLeft = CGPoint(x: 0, y: playableRect.minY)
+        let topRight = CGPoint(x: size.width, y: playableRect.maxY)
+        
+        if zombie.position.x <= bottomLeft.x {
+            zombie.position.x = bottomLeft.x
+            velocity.x = -velocity.x
+        }
+        if zombie.position.x >= topRight.x {
+            zombie.position.x = topRight.x
+            velocity.x = -velocity.x
+            
+        }
+        if zombie.position.y <= bottomLeft.y {
+            zombie.position.y = bottomLeft.y
+            velocity.y = -velocity.y
+        }
+        if zombie.position.y >= topRight.y {
+            zombie.position.y = topRight.y
+            velocity.y = -velocity.y
+        }
+    }
+    
+    func rotateSprite(_ sprite: SKSpriteNode, direction: CGPoint) {
+        sprite.zRotation = direction.angle
     }
 }
+
+
+
+
+
+
+
+
+
+
+

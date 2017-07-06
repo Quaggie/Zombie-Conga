@@ -8,19 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		F4A33BF91F0E9ADD009F7CFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A33BF81F0E9ADD009F7CFC /* AppDelegate.swift */; };
-		F4A33BFB1F0E9ADD009F7CFC /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F4A33BFA1F0E9ADD009F7CFC /* GameScene.sks */; };
 		F4A33BFD1F0E9ADD009F7CFC /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = F4A33BFC1F0E9ADD009F7CFC /* Actions.sks */; };
 		F4A33BFF1F0E9ADD009F7CFC /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A33BFE1F0E9ADD009F7CFC /* GameScene.swift */; };
 		F4A33C011F0E9ADD009F7CFC /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A33C001F0E9ADD009F7CFC /* GameViewController.swift */; };
 		F4A33C041F0E9ADD009F7CFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4A33C021F0E9ADD009F7CFC /* Main.storyboard */; };
 		F4A33C061F0E9ADD009F7CFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4A33C051F0E9ADD009F7CFC /* Assets.xcassets */; };
 		F4A33C091F0E9ADD009F7CFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4A33C071F0E9ADD009F7CFC /* LaunchScreen.storyboard */; };
+		F4A33C171F0E9C41009F7CFC /* sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = F4A33C101F0E9C40009F7CFC /* sprites.atlas */; };
+		F4A33C181F0E9C41009F7CFC /* background1.png in Resources */ = {isa = PBXBuildFile; fileRef = F4A33C121F0E9C41009F7CFC /* background1.png */; };
+		F4A33C191F0E9C41009F7CFC /* background2.png in Resources */ = {isa = PBXBuildFile; fileRef = F4A33C131F0E9C41009F7CFC /* background2.png */; };
+		F4A33C1A1F0E9C41009F7CFC /* MainMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = F4A33C141F0E9C41009F7CFC /* MainMenu.png */; };
+		F4A33C1B1F0E9C41009F7CFC /* YouLose.png in Resources */ = {isa = PBXBuildFile; fileRef = F4A33C151F0E9C41009F7CFC /* YouLose.png */; };
+		F4A33C1C1F0E9C41009F7CFC /* YouWin.png in Resources */ = {isa = PBXBuildFile; fileRef = F4A33C161F0E9C41009F7CFC /* YouWin.png */; };
+		F4A33C1E1F0EA9F7009F7CFC /* MyUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A33C1D1F0EA9F7009F7CFC /* MyUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F4A33BF51F0E9ADD009F7CFC /* Zombie Conga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zombie Conga.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4A33BF81F0E9ADD009F7CFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F4A33BFA1F0E9ADD009F7CFC /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		F4A33BFC1F0E9ADD009F7CFC /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		F4A33BFE1F0E9ADD009F7CFC /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		F4A33C001F0E9ADD009F7CFC /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +33,13 @@
 		F4A33C051F0E9ADD009F7CFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4A33C081F0E9ADD009F7CFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4A33C0A1F0E9ADD009F7CFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4A33C101F0E9C40009F7CFC /* sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = sprites.atlas; path = "../../../../Desktop/iOS Games by Tutorials Second Edition/Chapter 1 - Sprites/Resources/sprites.atlas"; sourceTree = "<group>"; };
+		F4A33C121F0E9C41009F7CFC /* background1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background1.png; sourceTree = "<group>"; };
+		F4A33C131F0E9C41009F7CFC /* background2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background2.png; sourceTree = "<group>"; };
+		F4A33C141F0E9C41009F7CFC /* MainMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainMenu.png; sourceTree = "<group>"; };
+		F4A33C151F0E9C41009F7CFC /* YouLose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YouLose.png; sourceTree = "<group>"; };
+		F4A33C161F0E9C41009F7CFC /* YouWin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YouWin.png; sourceTree = "<group>"; };
+		F4A33C1D1F0EA9F7009F7CFC /* MyUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +57,8 @@
 			isa = PBXGroup;
 			children = (
 				F4A33BF71F0E9ADD009F7CFC /* Zombie Conga */,
+				F4A33C111F0E9C41009F7CFC /* Images */,
+				F4A33C101F0E9C40009F7CFC /* sprites.atlas */,
 				F4A33BF61F0E9ADD009F7CFC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,7 +75,6 @@
 			isa = PBXGroup;
 			children = (
 				F4A33BF81F0E9ADD009F7CFC /* AppDelegate.swift */,
-				F4A33BFA1F0E9ADD009F7CFC /* GameScene.sks */,
 				F4A33BFC1F0E9ADD009F7CFC /* Actions.sks */,
 				F4A33BFE1F0E9ADD009F7CFC /* GameScene.swift */,
 				F4A33C001F0E9ADD009F7CFC /* GameViewController.swift */,
@@ -69,8 +82,22 @@
 				F4A33C051F0E9ADD009F7CFC /* Assets.xcassets */,
 				F4A33C071F0E9ADD009F7CFC /* LaunchScreen.storyboard */,
 				F4A33C0A1F0E9ADD009F7CFC /* Info.plist */,
+				F4A33C1D1F0EA9F7009F7CFC /* MyUtils.swift */,
 			);
 			path = "Zombie Conga";
+			sourceTree = "<group>";
+		};
+		F4A33C111F0E9C41009F7CFC /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F4A33C121F0E9C41009F7CFC /* background1.png */,
+				F4A33C131F0E9C41009F7CFC /* background2.png */,
+				F4A33C141F0E9C41009F7CFC /* MainMenu.png */,
+				F4A33C151F0E9C41009F7CFC /* YouLose.png */,
+				F4A33C161F0E9C41009F7CFC /* YouWin.png */,
+			);
+			name = Images;
+			path = "../../../../Desktop/iOS Games by Tutorials Second Edition/Chapter 1 - Sprites/Resources/Images";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,8 +158,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4A33C171F0E9C41009F7CFC /* sprites.atlas in Resources */,
+				F4A33C1A1F0E9C41009F7CFC /* MainMenu.png in Resources */,
+				F4A33C1C1F0E9C41009F7CFC /* YouWin.png in Resources */,
+				F4A33C181F0E9C41009F7CFC /* background1.png in Resources */,
+				F4A33C191F0E9C41009F7CFC /* background2.png in Resources */,
 				F4A33C041F0E9ADD009F7CFC /* Main.storyboard in Resources */,
-				F4A33BFB1F0E9ADD009F7CFC /* GameScene.sks in Resources */,
+				F4A33C1B1F0E9C41009F7CFC /* YouLose.png in Resources */,
 				F4A33C061F0E9ADD009F7CFC /* Assets.xcassets in Resources */,
 				F4A33C091F0E9ADD009F7CFC /* LaunchScreen.storyboard in Resources */,
 				F4A33BFD1F0E9ADD009F7CFC /* Actions.sks in Resources */,
@@ -149,6 +181,7 @@
 				F4A33BFF1F0E9ADD009F7CFC /* GameScene.swift in Sources */,
 				F4A33C011F0E9ADD009F7CFC /* GameViewController.swift in Sources */,
 				F4A33BF91F0E9ADD009F7CFC /* AppDelegate.swift in Sources */,
+				F4A33C1E1F0EA9F7009F7CFC /* MyUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
