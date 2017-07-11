@@ -25,7 +25,7 @@ class GameScene: SKScene {
     let zombieRotateRadiansPerSec: CGFloat = 4.0 * π
     
     let catMovePointsPerSec: CGFloat = 480.0
-    var lives = 5
+    var lives = 2
     var gameOver = false
     
     let catCollisionSound: SKAction = SKAction.playSoundFileNamed( "hitCat.wav", waitForCompletion: false)
@@ -78,7 +78,7 @@ class GameScene: SKScene {
         run(SKAction.repeatForever(
             SKAction.sequence([SKAction.run(spawnCat),
                                SKAction.wait(forDuration: 1.0)])))
-        debugDrawPlayableArea()
+//        debugDrawPlayableArea()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -133,6 +133,12 @@ class GameScene: SKScene {
         if lives <= 0 && !gameOver {
             gameOver = true
             print("You lose!")
+            
+            let gameOverScene = GameOverScene(size: size, won: false)
+            gameOverScene.scaleMode = scaleMode
+            
+            let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
+            view?.presentScene(gameOverScene, transition: reveal)
         }
     }
     
@@ -326,6 +332,12 @@ class GameScene: SKScene {
         if trainCount >= 30 && !gameOver {
             gameOver = true
             print("You win!")
+            
+            let gameOverScene = GameOverScene(size: size, won: true)
+            gameOverScene.scaleMode = scaleMode
+            
+            let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
+            view?.presentScene(gameOverScene, transition: reveal)
         }
     }
     
