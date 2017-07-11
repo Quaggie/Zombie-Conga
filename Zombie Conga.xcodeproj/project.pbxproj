@@ -7,6 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F45B99201F155B220060ECD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45B991F1F155B220060ECD2 /* AppDelegate.swift */; };
+		F45B99241F155B220060ECD2 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = F45B99231F155B220060ECD2 /* Actions.sks */; };
+		F45B99281F155B220060ECD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45B99271F155B220060ECD2 /* ViewController.swift */; };
+		F45B992D1F155B220060ECD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F45B992B1F155B220060ECD2 /* Main.storyboard */; };
+		F45B99391F155C4D0060ECD2 /* sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = F45B99381F155BF60060ECD2 /* sprites.atlas */; };
+		F45B993A1F155C4E0060ECD2 /* sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = F45B99381F155BF60060ECD2 /* sprites.atlas */; };
+		F45B993B1F155C530060ECD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4A33C051F0E9ADD009F7CFC /* Assets.xcassets */; };
+		F45B993C1F155C6B0060ECD2 /* background1.png in Resources */ = {isa = PBXBuildFile; fileRef = F4A33C121F0E9C41009F7CFC /* background1.png */; };
+		F45B993D1F155C6B0060ECD2 /* background2.png in Resources */ = {isa = PBXBuildFile; fileRef = F4A33C131F0E9C41009F7CFC /* background2.png */; };
+		F45B993E1F155C6B0060ECD2 /* MainMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = F4A33C141F0E9C41009F7CFC /* MainMenu.png */; };
+		F45B993F1F155C6B0060ECD2 /* YouLose.png in Resources */ = {isa = PBXBuildFile; fileRef = F4A33C151F0E9C41009F7CFC /* YouLose.png */; };
+		F45B99401F155C6B0060ECD2 /* YouWin.png in Resources */ = {isa = PBXBuildFile; fileRef = F4A33C161F0E9C41009F7CFC /* YouWin.png */; };
+		F45B99411F155C720060ECD2 /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F45F2CBF1F14FCAD00BFE698 /* backgroundMusic.mp3 */; };
+		F45B99421F155C720060ECD2 /* hitCat.wav in Resources */ = {isa = PBXBuildFile; fileRef = F45F2CBE1F14FCAD00BFE698 /* hitCat.wav */; };
+		F45B99431F155C720060ECD2 /* hitCatLady.wav in Resources */ = {isa = PBXBuildFile; fileRef = F45F2CC01F14FCAE00BFE698 /* hitCatLady.wav */; };
+		F45B99441F155C720060ECD2 /* lose.wav in Resources */ = {isa = PBXBuildFile; fileRef = F45F2CBC1F14FCAD00BFE698 /* lose.wav */; };
+		F45B99451F155C720060ECD2 /* win.wav in Resources */ = {isa = PBXBuildFile; fileRef = F45F2CBD1F14FCAD00BFE698 /* win.wav */; };
+		F45B99461F155F410060ECD2 /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D1DCBC1F15449100DC72B2 /* MainMenuScene.swift */; };
+		F45B99471F155F460060ECD2 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D1DCB81F153AB400DC72B2 /* GameOverScene.swift */; };
+		F45B99481F155F490060ECD2 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A33BFE1F0E9ADD009F7CFC /* GameScene.swift */; };
+		F45B99491F155F4C0060ECD2 /* MyUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A33C1D1F0EA9F7009F7CFC /* MyUtils.swift */; };
+		F45B994A1F1560260060ECD2 /* Sprites.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D1DCBA1F15431800DC72B2 /* Sprites.swift */; };
 		F45F2CC11F14FCAE00BFE698 /* lose.wav in Resources */ = {isa = PBXBuildFile; fileRef = F45F2CBC1F14FCAD00BFE698 /* lose.wav */; };
 		F45F2CC21F14FCAE00BFE698 /* win.wav in Resources */ = {isa = PBXBuildFile; fileRef = F45F2CBD1F14FCAD00BFE698 /* win.wav */; };
 		F45F2CC31F14FCAE00BFE698 /* hitCat.wav in Resources */ = {isa = PBXBuildFile; fileRef = F45F2CBE1F14FCAD00BFE698 /* hitCat.wav */; };
@@ -19,7 +41,6 @@
 		F4A33C041F0E9ADD009F7CFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4A33C021F0E9ADD009F7CFC /* Main.storyboard */; };
 		F4A33C061F0E9ADD009F7CFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4A33C051F0E9ADD009F7CFC /* Assets.xcassets */; };
 		F4A33C091F0E9ADD009F7CFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4A33C071F0E9ADD009F7CFC /* LaunchScreen.storyboard */; };
-		F4A33C171F0E9C41009F7CFC /* sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = F4A33C101F0E9C40009F7CFC /* sprites.atlas */; };
 		F4A33C181F0E9C41009F7CFC /* background1.png in Resources */ = {isa = PBXBuildFile; fileRef = F4A33C121F0E9C41009F7CFC /* background1.png */; };
 		F4A33C191F0E9C41009F7CFC /* background2.png in Resources */ = {isa = PBXBuildFile; fileRef = F4A33C131F0E9C41009F7CFC /* background2.png */; };
 		F4A33C1A1F0E9C41009F7CFC /* MainMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = F4A33C141F0E9C41009F7CFC /* MainMenu.png */; };
@@ -32,6 +53,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F45B991D1F155B210060ECD2 /* ZombieCongaMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZombieCongaMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F45B991F1F155B220060ECD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F45B99231F155B220060ECD2 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		F45B99271F155B220060ECD2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F45B992C1F155B220060ECD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F45B992E1F155B220060ECD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F45B992F1F155B220060ECD2 /* ZombieCongaMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ZombieCongaMac.entitlements; sourceTree = "<group>"; };
+		F45B99381F155BF60060ECD2 /* sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sprites.atlas; sourceTree = "<group>"; };
 		F45F2CBC1F14FCAD00BFE698 /* lose.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = lose.wav; path = "../../../../Desktop/iOS Games by Tutorials Second Edition/Chapter 3 - Actions/Resources/Sounds/lose.wav"; sourceTree = "<group>"; };
 		F45F2CBD1F14FCAD00BFE698 /* win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = win.wav; path = "../../../../Desktop/iOS Games by Tutorials Second Edition/Chapter 3 - Actions/Resources/Sounds/win.wav"; sourceTree = "<group>"; };
 		F45F2CBE1F14FCAD00BFE698 /* hitCat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = hitCat.wav; path = "../../../../Desktop/iOS Games by Tutorials Second Edition/Chapter 3 - Actions/Resources/Sounds/hitCat.wav"; sourceTree = "<group>"; };
@@ -46,7 +75,6 @@
 		F4A33C051F0E9ADD009F7CFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4A33C081F0E9ADD009F7CFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4A33C0A1F0E9ADD009F7CFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F4A33C101F0E9C40009F7CFC /* sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = sprites.atlas; path = "../../../../Desktop/iOS Games by Tutorials Second Edition/Chapter 1 - Sprites/Resources/sprites.atlas"; sourceTree = "<group>"; };
 		F4A33C121F0E9C41009F7CFC /* background1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background1.png; sourceTree = "<group>"; };
 		F4A33C131F0E9C41009F7CFC /* background2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background2.png; sourceTree = "<group>"; };
 		F4A33C141F0E9C41009F7CFC /* MainMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainMenu.png; sourceTree = "<group>"; };
@@ -59,6 +87,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F45B991A1F155B210060ECD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F4A33BF21F0E9ADD009F7CFC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -69,6 +104,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F45B991E1F155B220060ECD2 /* ZombieCongaMac */ = {
+			isa = PBXGroup;
+			children = (
+				F45B991F1F155B220060ECD2 /* AppDelegate.swift */,
+				F45B99231F155B220060ECD2 /* Actions.sks */,
+				F45B99271F155B220060ECD2 /* ViewController.swift */,
+				F45B992B1F155B220060ECD2 /* Main.storyboard */,
+				F45B992E1F155B220060ECD2 /* Info.plist */,
+				F45B992F1F155B220060ECD2 /* ZombieCongaMac.entitlements */,
+			);
+			path = ZombieCongaMac;
+			sourceTree = "<group>";
+		};
+		F45B99331F155B790060ECD2 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				F4D1DCBA1F15431800DC72B2 /* Sprites.swift */,
+				F4A33BFE1F0E9ADD009F7CFC /* GameScene.swift */,
+				F4D1DCB81F153AB400DC72B2 /* GameOverScene.swift */,
+				F4D1DCBC1F15449100DC72B2 /* MainMenuScene.swift */,
+				F4A33C1D1F0EA9F7009F7CFC /* MyUtils.swift */,
+				F4A33C051F0E9ADD009F7CFC /* Assets.xcassets */,
+				F4A33C111F0E9C41009F7CFC /* Images */,
+				F45F2CBB1F14FC8200BFE698 /* Sounds */,
+				F45B99381F155BF60060ECD2 /* sprites.atlas */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
 		F45F2CBB1F14FC8200BFE698 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,10 +148,9 @@
 		F4A33BEC1F0E9ADD009F7CFC = {
 			isa = PBXGroup;
 			children = (
+				F45B99331F155B790060ECD2 /* Shared */,
 				F4A33BF71F0E9ADD009F7CFC /* Zombie Conga */,
-				F4A33C111F0E9C41009F7CFC /* Images */,
-				F45F2CBB1F14FC8200BFE698 /* Sounds */,
-				F4A33C101F0E9C40009F7CFC /* sprites.atlas */,
+				F45B991E1F155B220060ECD2 /* ZombieCongaMac */,
 				F4A33BF61F0E9ADD009F7CFC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -96,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				F4A33BF51F0E9ADD009F7CFC /* Zombie Conga.app */,
+				F45B991D1F155B210060ECD2 /* ZombieCongaMac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,12 +169,6 @@
 			children = (
 				F4A33BF81F0E9ADD009F7CFC /* AppDelegate.swift */,
 				F4A33C001F0E9ADD009F7CFC /* GameViewController.swift */,
-				F4A33BFE1F0E9ADD009F7CFC /* GameScene.swift */,
-				F4D1DCB81F153AB400DC72B2 /* GameOverScene.swift */,
-				F4D1DCBA1F15431800DC72B2 /* Sprites.swift */,
-				F4D1DCBC1F15449100DC72B2 /* MainMenuScene.swift */,
-				F4A33C1D1F0EA9F7009F7CFC /* MyUtils.swift */,
-				F4A33C051F0E9ADD009F7CFC /* Assets.xcassets */,
 				F4A33BFC1F0E9ADD009F7CFC /* Actions.sks */,
 				F4A33C021F0E9ADD009F7CFC /* Main.storyboard */,
 				F4A33C071F0E9ADD009F7CFC /* LaunchScreen.storyboard */,
@@ -135,6 +193,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F45B991C1F155B210060ECD2 /* ZombieCongaMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F45B99321F155B220060ECD2 /* Build configuration list for PBXNativeTarget "ZombieCongaMac" */;
+			buildPhases = (
+				F45B99191F155B210060ECD2 /* Sources */,
+				F45B991A1F155B210060ECD2 /* Frameworks */,
+				F45B991B1F155B210060ECD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZombieCongaMac;
+			productName = ZombieCongaMac;
+			productReference = F45B991D1F155B210060ECD2 /* ZombieCongaMac.app */;
+			productType = "com.apple.product-type.application";
+		};
 		F4A33BF41F0E9ADD009F7CFC /* Zombie Conga */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4A33C0D1F0E9ADD009F7CFC /* Build configuration list for PBXNativeTarget "Zombie Conga" */;
@@ -162,6 +237,9 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = Quaggie;
 				TargetAttributes = {
+					F45B991C1F155B210060ECD2 = {
+						CreatedOnToolsVersion = 9.0;
+					};
 					F4A33BF41F0E9ADD009F7CFC = {
 						CreatedOnToolsVersion = 9.0;
 					};
@@ -181,16 +259,37 @@
 			projectRoot = "";
 			targets = (
 				F4A33BF41F0E9ADD009F7CFC /* Zombie Conga */,
+				F45B991C1F155B210060ECD2 /* ZombieCongaMac */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F45B991B1F155B210060ECD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F45B99441F155C720060ECD2 /* lose.wav in Resources */,
+				F45B99451F155C720060ECD2 /* win.wav in Resources */,
+				F45B993A1F155C4E0060ECD2 /* sprites.atlas in Resources */,
+				F45B993E1F155C6B0060ECD2 /* MainMenu.png in Resources */,
+				F45B99411F155C720060ECD2 /* backgroundMusic.mp3 in Resources */,
+				F45B99421F155C720060ECD2 /* hitCat.wav in Resources */,
+				F45B99431F155C720060ECD2 /* hitCatLady.wav in Resources */,
+				F45B993F1F155C6B0060ECD2 /* YouLose.png in Resources */,
+				F45B99241F155B220060ECD2 /* Actions.sks in Resources */,
+				F45B993D1F155C6B0060ECD2 /* background2.png in Resources */,
+				F45B993B1F155C530060ECD2 /* Assets.xcassets in Resources */,
+				F45B99401F155C6B0060ECD2 /* YouWin.png in Resources */,
+				F45B993C1F155C6B0060ECD2 /* background1.png in Resources */,
+				F45B992D1F155B220060ECD2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F4A33BF31F0E9ADD009F7CFC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4A33C171F0E9C41009F7CFC /* sprites.atlas in Resources */,
 				F4A33C1A1F0E9C41009F7CFC /* MainMenu.png in Resources */,
 				F4A33C1C1F0E9C41009F7CFC /* YouWin.png in Resources */,
 				F45F2CC31F14FCAE00BFE698 /* hitCat.wav in Resources */,
@@ -201,6 +300,7 @@
 				F45F2CC41F14FCAE00BFE698 /* backgroundMusic.mp3 in Resources */,
 				F45F2CC11F14FCAE00BFE698 /* lose.wav in Resources */,
 				F4A33C061F0E9ADD009F7CFC /* Assets.xcassets in Resources */,
+				F45B99391F155C4D0060ECD2 /* sprites.atlas in Resources */,
 				F45F2CC21F14FCAE00BFE698 /* win.wav in Resources */,
 				F45F2CC51F14FCAE00BFE698 /* hitCatLady.wav in Resources */,
 				F4A33C091F0E9ADD009F7CFC /* LaunchScreen.storyboard in Resources */,
@@ -211,6 +311,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F45B99191F155B210060ECD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F45B99481F155F490060ECD2 /* GameScene.swift in Sources */,
+				F45B99491F155F4C0060ECD2 /* MyUtils.swift in Sources */,
+				F45B994A1F1560260060ECD2 /* Sprites.swift in Sources */,
+				F45B99461F155F410060ECD2 /* MainMenuScene.swift in Sources */,
+				F45B99281F155B220060ECD2 /* ViewController.swift in Sources */,
+				F45B99471F155F460060ECD2 /* GameOverScene.swift in Sources */,
+				F45B99201F155B220060ECD2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F4A33BF11F0E9ADD009F7CFC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -228,6 +342,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		F45B992B1F155B220060ECD2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F45B992C1F155B220060ECD2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		F4A33C021F0E9ADD009F7CFC /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -247,6 +369,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F45B99301F155B220060ECD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ZombieCongaMac/ZombieCongaMac.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 7397PXU582;
+				INFOPLIST_FILE = ZombieCongaMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.quaggie.ZombieCongaMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		F45B99311F155B220060ECD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ZombieCongaMac/ZombieCongaMac.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 7397PXU582;
+				INFOPLIST_FILE = ZombieCongaMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.quaggie.ZombieCongaMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 		F4A33C0B1F0E9ADD009F7CFC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -381,6 +539,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F45B99321F155B220060ECD2 /* Build configuration list for PBXNativeTarget "ZombieCongaMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F45B99301F155B220060ECD2 /* Debug */,
+				F45B99311F155B220060ECD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		F4A33BF01F0E9ADD009F7CFC /* Build configuration list for PBXProject "Zombie Conga" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

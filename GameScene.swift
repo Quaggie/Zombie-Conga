@@ -92,6 +92,7 @@ class GameScene: SKScene {
 //        debugDrawPlayableArea()
     }
     
+    #if os(iOS)
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
             let touchLocation = touch.location(in: backgroundLayer)
@@ -114,6 +115,22 @@ class GameScene: SKScene {
             lastTouchLocation = touchLocation
         }
     }
+    #else
+    override func mouseDown(with event: NSEvent) {
+        let touchLocation = event.location(in: backgroundLayer)
+        sceneTouched(touchLocation: touchLocation)
+    }
+    
+    override func mouseDragged(with theEvent: NSEvent) {
+        let touchLocation = theEvent.location(in: backgroundLayer)
+        sceneTouched(touchLocation: touchLocation)
+    }
+    
+    override func mouseUp(with theEvent: NSEvent) {
+        let touchLocation = theEvent.location(in: backgroundLayer)
+        lastTouchLocation = touchLocation
+    }
+    #endif
     
     override func update(_ currentTime: TimeInterval) {
         if lastUpdateTime > 0 {
@@ -278,7 +295,7 @@ class GameScene: SKScene {
         cat.setScale(1)
         cat.zRotation = 0
         
-        let turnGreenAction = SKAction.colorize(with: UIColor.green, colorBlendFactor: 1.0, duration: 0.2)
+        let turnGreenAction = SKAction.colorize(with: .green, colorBlendFactor: 1.0, duration: 0.2)
         cat.run(turnGreenAction)
     }
     
