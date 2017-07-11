@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F45F2CC11F14FCAE00BFE698 /* lose.wav in Resources */ = {isa = PBXBuildFile; fileRef = F45F2CBC1F14FCAD00BFE698 /* lose.wav */; };
+		F45F2CC21F14FCAE00BFE698 /* win.wav in Resources */ = {isa = PBXBuildFile; fileRef = F45F2CBD1F14FCAD00BFE698 /* win.wav */; };
+		F45F2CC31F14FCAE00BFE698 /* hitCat.wav in Resources */ = {isa = PBXBuildFile; fileRef = F45F2CBE1F14FCAD00BFE698 /* hitCat.wav */; };
+		F45F2CC41F14FCAE00BFE698 /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F45F2CBF1F14FCAD00BFE698 /* backgroundMusic.mp3 */; };
+		F45F2CC51F14FCAE00BFE698 /* hitCatLady.wav in Resources */ = {isa = PBXBuildFile; fileRef = F45F2CC01F14FCAE00BFE698 /* hitCatLady.wav */; };
 		F4A33BF91F0E9ADD009F7CFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A33BF81F0E9ADD009F7CFC /* AppDelegate.swift */; };
 		F4A33BFD1F0E9ADD009F7CFC /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = F4A33BFC1F0E9ADD009F7CFC /* Actions.sks */; };
 		F4A33BFF1F0E9ADD009F7CFC /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A33BFE1F0E9ADD009F7CFC /* GameScene.swift */; };
@@ -24,6 +29,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F45F2CBC1F14FCAD00BFE698 /* lose.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = lose.wav; path = "../../../../Desktop/iOS Games by Tutorials Second Edition/Chapter 3 - Actions/Resources/Sounds/lose.wav"; sourceTree = "<group>"; };
+		F45F2CBD1F14FCAD00BFE698 /* win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = win.wav; path = "../../../../Desktop/iOS Games by Tutorials Second Edition/Chapter 3 - Actions/Resources/Sounds/win.wav"; sourceTree = "<group>"; };
+		F45F2CBE1F14FCAD00BFE698 /* hitCat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = hitCat.wav; path = "../../../../Desktop/iOS Games by Tutorials Second Edition/Chapter 3 - Actions/Resources/Sounds/hitCat.wav"; sourceTree = "<group>"; };
+		F45F2CBF1F14FCAD00BFE698 /* backgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = backgroundMusic.mp3; path = "../../../../Desktop/iOS Games by Tutorials Second Edition/Chapter 3 - Actions/Resources/Sounds/backgroundMusic.mp3"; sourceTree = "<group>"; };
+		F45F2CC01F14FCAE00BFE698 /* hitCatLady.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = hitCatLady.wav; path = "../../../../Desktop/iOS Games by Tutorials Second Edition/Chapter 3 - Actions/Resources/Sounds/hitCatLady.wav"; sourceTree = "<group>"; };
 		F4A33BF51F0E9ADD009F7CFC /* Zombie Conga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zombie Conga.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4A33BF81F0E9ADD009F7CFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4A33BFC1F0E9ADD009F7CFC /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
@@ -53,11 +63,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F45F2CBB1F14FC8200BFE698 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				F45F2CBF1F14FCAD00BFE698 /* backgroundMusic.mp3 */,
+				F45F2CBE1F14FCAD00BFE698 /* hitCat.wav */,
+				F45F2CC01F14FCAE00BFE698 /* hitCatLady.wav */,
+				F45F2CBC1F14FCAD00BFE698 /* lose.wav */,
+				F45F2CBD1F14FCAD00BFE698 /* win.wav */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
 		F4A33BEC1F0E9ADD009F7CFC = {
 			isa = PBXGroup;
 			children = (
 				F4A33BF71F0E9ADD009F7CFC /* Zombie Conga */,
 				F4A33C111F0E9C41009F7CFC /* Images */,
+				F45F2CBB1F14FC8200BFE698 /* Sounds */,
 				F4A33C101F0E9C40009F7CFC /* sprites.atlas */,
 				F4A33BF61F0E9ADD009F7CFC /* Products */,
 			);
@@ -161,11 +184,16 @@
 				F4A33C171F0E9C41009F7CFC /* sprites.atlas in Resources */,
 				F4A33C1A1F0E9C41009F7CFC /* MainMenu.png in Resources */,
 				F4A33C1C1F0E9C41009F7CFC /* YouWin.png in Resources */,
+				F45F2CC31F14FCAE00BFE698 /* hitCat.wav in Resources */,
 				F4A33C181F0E9C41009F7CFC /* background1.png in Resources */,
 				F4A33C191F0E9C41009F7CFC /* background2.png in Resources */,
 				F4A33C041F0E9ADD009F7CFC /* Main.storyboard in Resources */,
 				F4A33C1B1F0E9C41009F7CFC /* YouLose.png in Resources */,
+				F45F2CC41F14FCAE00BFE698 /* backgroundMusic.mp3 in Resources */,
+				F45F2CC11F14FCAE00BFE698 /* lose.wav in Resources */,
 				F4A33C061F0E9ADD009F7CFC /* Assets.xcassets in Resources */,
+				F45F2CC21F14FCAE00BFE698 /* win.wav in Resources */,
+				F45F2CC51F14FCAE00BFE698 /* hitCatLady.wav in Resources */,
 				F4A33C091F0E9ADD009F7CFC /* LaunchScreen.storyboard in Resources */,
 				F4A33BFD1F0E9ADD009F7CFC /* Actions.sks in Resources */,
 			);
@@ -357,6 +385,7 @@
 				F4A33C0F1F0E9ADD009F7CFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
