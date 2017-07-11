@@ -28,6 +28,7 @@
 		F4A33C1E1F0EA9F7009F7CFC /* MyUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A33C1D1F0EA9F7009F7CFC /* MyUtils.swift */; };
 		F4D1DCB91F153AB400DC72B2 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D1DCB81F153AB400DC72B2 /* GameOverScene.swift */; };
 		F4D1DCBB1F15431800DC72B2 /* Sprites.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D1DCBA1F15431800DC72B2 /* Sprites.swift */; };
+		F4D1DCBD1F15449100DC72B2 /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D1DCBC1F15449100DC72B2 /* MainMenuScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		F4A33C1D1F0EA9F7009F7CFC /* MyUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUtils.swift; sourceTree = "<group>"; };
 		F4D1DCB81F153AB400DC72B2 /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		F4D1DCBA1F15431800DC72B2 /* Sprites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sprites.swift; sourceTree = "<group>"; };
+		F4D1DCBC1F15449100DC72B2 /* MainMenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,16 +104,17 @@
 			isa = PBXGroup;
 			children = (
 				F4A33BF81F0E9ADD009F7CFC /* AppDelegate.swift */,
-				F4A33BFC1F0E9ADD009F7CFC /* Actions.sks */,
+				F4A33C001F0E9ADD009F7CFC /* GameViewController.swift */,
 				F4A33BFE1F0E9ADD009F7CFC /* GameScene.swift */,
 				F4D1DCB81F153AB400DC72B2 /* GameOverScene.swift */,
-				F4A33C001F0E9ADD009F7CFC /* GameViewController.swift */,
-				F4A33C021F0E9ADD009F7CFC /* Main.storyboard */,
+				F4D1DCBA1F15431800DC72B2 /* Sprites.swift */,
+				F4D1DCBC1F15449100DC72B2 /* MainMenuScene.swift */,
+				F4A33C1D1F0EA9F7009F7CFC /* MyUtils.swift */,
 				F4A33C051F0E9ADD009F7CFC /* Assets.xcassets */,
+				F4A33BFC1F0E9ADD009F7CFC /* Actions.sks */,
+				F4A33C021F0E9ADD009F7CFC /* Main.storyboard */,
 				F4A33C071F0E9ADD009F7CFC /* LaunchScreen.storyboard */,
 				F4A33C0A1F0E9ADD009F7CFC /* Info.plist */,
-				F4A33C1D1F0EA9F7009F7CFC /* MyUtils.swift */,
-				F4D1DCBA1F15431800DC72B2 /* Sprites.swift */,
 			);
 			path = "Zombie Conga";
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				F4A33BFF1F0E9ADD009F7CFC /* GameScene.swift in Sources */,
 				F4A33C011F0E9ADD009F7CFC /* GameViewController.swift in Sources */,
 				F4A33BF91F0E9ADD009F7CFC /* AppDelegate.swift in Sources */,
+				F4D1DCBD1F15449100DC72B2 /* MainMenuScene.swift in Sources */,
 				F4A33C1E1F0EA9F7009F7CFC /* MyUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
