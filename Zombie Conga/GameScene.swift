@@ -10,7 +10,9 @@ import SpriteKit
 import GameplayKit
 
 class GameScene: SKScene {
-    let background = SKSpriteNode(imageNamed: "background1")
+    let backgroundLayer = SKNode()
+    
+    let backgroundMovePointsPerSec: CGFloat = 200.0
     let zombie = ZombieSprite(imageNamed: "zombie1")
     var zombieIsInvincible = false
     let zombieAnimation: SKAction
@@ -65,13 +67,20 @@ class GameScene: SKScene {
     override func didMove(to view: SKView) {
         playBackgroundMusic(filename: "backgroundMusic.mp3")
         
-        background.zPosition = -1
-        background.position = CGPoint(x: size.width / 2, y: size.height / 2)
-        addChild(background)
+        backgroundLayer.zPosition = -1
+        addChild(backgroundLayer)
+        
+        for i in 0...1 {
+            let background = backgroundNode()
+            background.anchorPoint = .zero
+            background.position = CGPoint(x: CGFloat(i) * background.size.width, y: 0)
+            background.name = "background"
+            backgroundLayer.addChild(background)
+        }
         
         zombie.zPosition = 100
         zombie.position = CGPoint(x: 400, y: 400)
-        addChild(zombie)
+        backgroundLayer.addChild(zombie)
         
         run(SKAction.repeatForever(
             SKAction.sequence([SKAction.run(spawnEnemy),
@@ -85,7 +94,7 @@ class GameScene: SKScene {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
-            let touchLocation = touch.location(in: self)
+            let touchLocation = touch.location(in: backgroundLayer)
             lastTouchLocation = touchLocation
             sceneTouched(touchLocation: touchLocation)
         }
@@ -93,7 +102,7 @@ class GameScene: SKScene {
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
-            let touchLocation = touch.location(in: self)
+            let touchLocation = touch.location(in: backgroundLayer)
             lastTouchLocation = touchLocation
             sceneTouched(touchLocation: touchLocation)
         }
@@ -101,7 +110,7 @@ class GameScene: SKScene {
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
-            let touchLocation = touch.location(in: self)
+            let touchLocation = touch.location(in: backgroundLayer)
             lastTouchLocation = touchLocation
         }
     }
@@ -115,22 +124,23 @@ class GameScene: SKScene {
         lastUpdateTime = currentTime
         
         if let lastTouchLocation = lastTouchLocation {
-            let offset = lastTouchLocation - zombie.position
-            let distance = offset.length()
-            if distance <= (CGFloat(dt) * zombieMovePointsPerSec) {
-                zombie.position = lastTouchLocation
-                velocity = .zero
-                stopZombieAnimation()
-            } else {
+//            let offset = lastTouchLocation - zombie.position
+//            let distance = offset.length()
+//            if distance <= (CGFloat(dt) * zombieMovePointsPerSec) {
+//                zombie.position = lastTouchLocation
+//                velocity = .zero
+//                stopZombieAnimation()
+//            } else {
                 moveSprite(zombie, velocity: velocity)
                 rotateSprite(zombie, direction: velocity, rotateRadiansPerSec: zombieRotateRadiansPerSec)
-            }
+//            }
         } else {
             moveSprite(zombie, velocity: velocity)
             rotateSprite(zombie, direction: velocity, rotateRadiansPerSec: zombieRotateRadiansPerSec)
         }
         boundsCheckZombie()
         moveTrain()
+        moveBackground()
         
         if lives <= 0 && !gameOver {
             gameOver = true
@@ -167,8 +177,8 @@ class GameScene: SKScene {
     }
     
     func boundsCheckZombie() {
-        let bottomLeft = CGPoint(x: 0, y: playableRect.minY)
-        let topRight = CGPoint(x: size.width, y: playableRect.maxY)
+        let bottomLeft = backgroundLayer.convert(CGPoint(x: 0, y: playableRect.minY), from: self)
+        let topRight = backgroundLayer.convert(CGPoint(x: size.width, y: playableRect.maxY), from: self)
         
         if zombie.position.x <= bottomLeft.x {
             zombie.position.x = bottomLeft.x
@@ -198,16 +208,18 @@ class GameScene: SKScene {
     func spawnEnemy() {
         let enemy = CrazyCatLadySprite(imageNamed: "enemy")
         enemy.name = "enemy"
-        enemy.position = CGPoint(
-            x: size.width + enemy.size.width/2,
+        enemy.zPosition = 1
+        let enemyScenePos = CGPoint(
+            x: size.width + enemy.size.width / 2,
             y: CGFloat.random(
                 min: playableRect.minY + enemy.size.height/2,
                 max: playableRect.maxY - enemy.size.height/2
             )
         )
-        addChild(enemy)
+        enemy.position = backgroundLayer.convert(enemyScenePos, from: self)
+        backgroundLayer.addChild(enemy)
         
-        let actionMove = SKAction.moveTo(x: -enemy.size.width/2, duration: 2.0)
+        let actionMove = SKAction.moveBy(x: -size.width - enemy.size.width, y: 0, duration: 2.0)
         let actionRemove = SKAction.removeFromParent()
         enemy.run(SKAction.sequence([actionMove, actionRemove]))
     }
@@ -224,13 +236,16 @@ class GameScene: SKScene {
     
     func spawnCat() {
         let cat = CatSprite(imageNamed: "cat")
-        cat.name = "train"
-        cat.position = CGPoint(
+        cat.name = "cat"
+        cat.zPosition = 1
+        
+        let catScenePos = CGPoint(
             x: CGFloat.random(min: playableRect.minX, max: playableRect.maxX),
             y: CGFloat.random(min: playableRect.minY, max: playableRect.maxY)
         )
+        cat.position = backgroundLayer.convert(catScenePos, from: self)
         cat.setScale(0)
-        addChild(cat)
+        backgroundLayer.addChild(cat)
         
         let appear = SKAction.scale(to: 1.0, duration: 0.5)
         
@@ -256,6 +271,7 @@ class GameScene: SKScene {
             return
         }
         cat.wasTurned = true
+        cat.name = "train"
         
         run(catCollisionSound)
         cat.removeAllActions()
@@ -294,7 +310,7 @@ class GameScene: SKScene {
         }
         
         var hitCats: [CatSprite] = []
-        enumerateChildNodes(withName: "train") { (node, _) in
+        backgroundLayer.enumerateChildNodes(withName: "cat") { (node, _) in
             if let cat = node as? CatSprite {
                 if cat.frame.intersects(self.zombie.frame) {
                     hitCats.append(cat)
@@ -306,7 +322,7 @@ class GameScene: SKScene {
         }
         
         var hitEnemies: [CrazyCatLadySprite] = []
-        enumerateChildNodes(withName: "enemy") { (node, _) in
+        backgroundLayer.enumerateChildNodes(withName: "enemy") { (node, _) in
             if let enemy = node as? CrazyCatLadySprite {
                 let enemyFrame = CGRect(origin: node.frame.origin, size: CGSize(width: 20, height: 20))
                 if enemyFrame.intersects(self.zombie.frame) {
@@ -323,7 +339,7 @@ class GameScene: SKScene {
         var trainCount = 0
         var targetPosition = zombie.position
         
-        enumerateChildNodes(withName: "train") { (node, _) in
+        backgroundLayer.enumerateChildNodes(withName: "train") { (node, _) in
             trainCount += 1
             if !node.hasActions() {
                 let actionDuration = 0.3
@@ -352,7 +368,7 @@ class GameScene: SKScene {
     
     func loseCats() {
         var loseCount = 0
-        enumerateChildNodes(withName: "train") { (node, stop) in
+        backgroundLayer.enumerateChildNodes(withName: "train") { (node, stop) in
             var randomSpot = node.position
             randomSpot.y += CGFloat.random(min: -100, max: 100)
             randomSpot.x += CGFloat.random(min: -100, max: 100)
@@ -370,6 +386,45 @@ class GameScene: SKScene {
             loseCount += 1
             if loseCount >= 2 {
                 stop.pointee = true
+            }
+        }
+    }
+    
+    func backgroundNode() -> SKSpriteNode {
+        let backgroundNode = SKSpriteNode()
+        backgroundNode.anchorPoint = .zero
+        backgroundNode.name = "background"
+        
+        let background1 = SKSpriteNode(imageNamed: "background1")
+        background1.anchorPoint = .zero
+        background1.position = CGPoint(x: 0, y: 0)
+        backgroundNode.addChild(background1)
+        
+        let background2 = SKSpriteNode(imageNamed: "background2")
+        background2.anchorPoint = .zero
+        background2.position = CGPoint(x: background1.frame.width, y: 0)
+        backgroundNode.addChild(background2)
+        
+        backgroundNode.size = CGSize(
+            width: background1.size.width + background2.size.width,
+            height: background1.size.height)
+        
+        return backgroundNode
+    }
+    
+    func moveBackground() {
+        let backgroundVelocity = CGPoint(x: -self.backgroundMovePointsPerSec, y: 0)
+        let amountToMove = backgroundVelocity * CGFloat(dt)
+        backgroundLayer.position += amountToMove
+        
+        backgroundLayer.enumerateChildNodes(withName: "background") { (node, _) in
+            if let background = node as? SKSpriteNode {
+                let backgroundScreenPos = self.backgroundLayer.convert(background.position, to: self)
+                if backgroundScreenPos.x <= -background.size.width {
+                    background.position = CGPoint(
+                        x: background.position.x + background.size.width * 2,
+                        y: background.position.y)
+                }
             }
         }
     }
