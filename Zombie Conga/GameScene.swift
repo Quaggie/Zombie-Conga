@@ -11,7 +11,7 @@ import GameplayKit
 
 class GameScene: SKScene {
     let background = SKSpriteNode(imageNamed: "background1")
-    let zombie = SKSpriteNode(imageNamed: "zombie1")
+    let zombie = ZombieSprite(imageNamed: "zombie1")
     var zombieIsInvincible = false
     let zombieAnimation: SKAction
     let playableRect: CGRect
@@ -63,6 +63,8 @@ class GameScene: SKScene {
     }
     
     override func didMove(to view: SKView) {
+        playBackgroundMusic(filename: "backgroundMusic.mp3")
+        
         background.zPosition = -1
         background.position = CGPoint(x: size.width / 2, y: size.height / 2)
         addChild(background)
@@ -133,6 +135,7 @@ class GameScene: SKScene {
         if lives <= 0 && !gameOver {
             gameOver = true
             print("You lose!")
+            backgroundMusicPlayer.stop()
             
             let gameOverScene = GameOverScene(size: size, won: false)
             gameOverScene.scaleMode = scaleMode
@@ -193,7 +196,7 @@ class GameScene: SKScene {
     }
     
     func spawnEnemy() {
-        let enemy = SKSpriteNode(imageNamed: "enemy")
+        let enemy = CrazyCatLadySprite(imageNamed: "enemy")
         enemy.name = "enemy"
         enemy.position = CGPoint(
             x: size.width + enemy.size.width/2,
@@ -220,7 +223,7 @@ class GameScene: SKScene {
     }
     
     func spawnCat() {
-        let cat = SKSpriteNode(imageNamed: "cat")
+        let cat = CatSprite(imageNamed: "cat")
         cat.name = "train"
         cat.position = CGPoint(
             x: CGFloat.random(min: playableRect.minX, max: playableRect.maxX),
@@ -248,7 +251,12 @@ class GameScene: SKScene {
         cat.run(SKAction.sequence(actions))
     }
     
-    func zombieHitCat(cat: SKSpriteNode) {
+    func zombieHitCat(cat: CatSprite) {
+        if cat.wasTurned {
+            return
+        }
+        cat.wasTurned = true
+        
         run(catCollisionSound)
         cat.removeAllActions()
         cat.setScale(1)
@@ -258,7 +266,7 @@ class GameScene: SKScene {
         cat.run(turnGreenAction)
     }
     
-    func zombieHitEnemy(enemy: SKSpriteNode) {
+    func zombieHitEnemy(enemy: CrazyCatLadySprite) {
         enemy.removeFromParent()
         run(enemyCollisionSound)
         loseCats()
@@ -281,9 +289,13 @@ class GameScene: SKScene {
     }
     
     func checkCollisions() {
-        var hitCats: [SKSpriteNode] = []
+        if zombieIsInvincible {
+            return
+        }
+        
+        var hitCats: [CatSprite] = []
         enumerateChildNodes(withName: "train") { (node, _) in
-            if let cat = node as? SKSpriteNode {
+            if let cat = node as? CatSprite {
                 if cat.frame.intersects(self.zombie.frame) {
                     hitCats.append(cat)
                 }
@@ -293,13 +305,9 @@ class GameScene: SKScene {
             zombieHitCat(cat: cat)
         }
         
-        if zombieIsInvincible {
-            return
-        }
-        
-        var hitEnemies: [SKSpriteNode] = []
+        var hitEnemies: [CrazyCatLadySprite] = []
         enumerateChildNodes(withName: "enemy") { (node, _) in
-            if let enemy = node as? SKSpriteNode {
+            if let enemy = node as? CrazyCatLadySprite {
                 let enemyFrame = CGRect(origin: node.frame.origin, size: CGSize(width: 20, height: 20))
                 if enemyFrame.intersects(self.zombie.frame) {
                     hitEnemies.append(enemy)
@@ -332,6 +340,7 @@ class GameScene: SKScene {
         if trainCount >= 30 && !gameOver {
             gameOver = true
             print("You win!")
+            backgroundMusicPlayer.stop()
             
             let gameOverScene = GameOverScene(size: size, won: true)
             gameOverScene.scaleMode = scaleMode
