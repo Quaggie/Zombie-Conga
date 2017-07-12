@@ -7,6 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E0C3EFD11F15BEDD00630BC9 /* background1.png in Resources */ = {isa = PBXBuildFile; fileRef = E0C3EFC61F15BDC100630BC9 /* background1.png */; };
+		E0C3EFD21F15BEDD00630BC9 /* background2.png in Resources */ = {isa = PBXBuildFile; fileRef = E0C3EFC71F15BDC100630BC9 /* background2.png */; };
+		E0C3EFD31F15BEDD00630BC9 /* MainMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = E0C3EFC81F15BDC100630BC9 /* MainMenu.png */; };
+		E0C3EFD41F15BEDD00630BC9 /* YouLose.png in Resources */ = {isa = PBXBuildFile; fileRef = E0C3EFC91F15BDC100630BC9 /* YouLose.png */; };
+		E0C3EFD51F15BEDD00630BC9 /* YouWin.png in Resources */ = {isa = PBXBuildFile; fileRef = E0C3EFCA1F15BDC100630BC9 /* YouWin.png */; };
+		E0C3EFD61F15BEDD00630BC9 /* background1.png in Resources */ = {isa = PBXBuildFile; fileRef = E0C3EFC61F15BDC100630BC9 /* background1.png */; };
+		E0C3EFD71F15BEDD00630BC9 /* background2.png in Resources */ = {isa = PBXBuildFile; fileRef = E0C3EFC71F15BDC100630BC9 /* background2.png */; };
+		E0C3EFD81F15BEDD00630BC9 /* MainMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = E0C3EFC81F15BDC100630BC9 /* MainMenu.png */; };
+		E0C3EFD91F15BEDD00630BC9 /* YouLose.png in Resources */ = {isa = PBXBuildFile; fileRef = E0C3EFC91F15BDC100630BC9 /* YouLose.png */; };
+		E0C3EFDA1F15BEDD00630BC9 /* YouWin.png in Resources */ = {isa = PBXBuildFile; fileRef = E0C3EFCA1F15BDC100630BC9 /* YouWin.png */; };
+		E0C3EFDB1F15BEE300630BC9 /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E0C3EFCC1F15BE0800630BC9 /* backgroundMusic.mp3 */; };
+		E0C3EFDC1F15BEE300630BC9 /* hitCat.wav in Resources */ = {isa = PBXBuildFile; fileRef = E0C3EFCD1F15BE0800630BC9 /* hitCat.wav */; };
+		E0C3EFDD1F15BEE300630BC9 /* hitCatLady.wav in Resources */ = {isa = PBXBuildFile; fileRef = E0C3EFCE1F15BE0800630BC9 /* hitCatLady.wav */; };
+		E0C3EFDE1F15BEE300630BC9 /* lose.wav in Resources */ = {isa = PBXBuildFile; fileRef = E0C3EFCF1F15BE0800630BC9 /* lose.wav */; };
+		E0C3EFDF1F15BEE300630BC9 /* win.wav in Resources */ = {isa = PBXBuildFile; fileRef = E0C3EFD01F15BE0800630BC9 /* win.wav */; };
+		E0C3EFE01F15BEE400630BC9 /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E0C3EFCC1F15BE0800630BC9 /* backgroundMusic.mp3 */; };
+		E0C3EFE11F15BEE400630BC9 /* hitCat.wav in Resources */ = {isa = PBXBuildFile; fileRef = E0C3EFCD1F15BE0800630BC9 /* hitCat.wav */; };
+		E0C3EFE21F15BEE400630BC9 /* hitCatLady.wav in Resources */ = {isa = PBXBuildFile; fileRef = E0C3EFCE1F15BE0800630BC9 /* hitCatLady.wav */; };
+		E0C3EFE31F15BEE400630BC9 /* lose.wav in Resources */ = {isa = PBXBuildFile; fileRef = E0C3EFCF1F15BE0800630BC9 /* lose.wav */; };
+		E0C3EFE41F15BEE400630BC9 /* win.wav in Resources */ = {isa = PBXBuildFile; fileRef = E0C3EFD01F15BE0800630BC9 /* win.wav */; };
 		F45B99201F155B220060ECD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45B991F1F155B220060ECD2 /* AppDelegate.swift */; };
 		F45B99241F155B220060ECD2 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = F45B99231F155B220060ECD2 /* Actions.sks */; };
 		F45B99281F155B220060ECD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45B99271F155B220060ECD2 /* ViewController.swift */; };
@@ -14,26 +34,11 @@
 		F45B99391F155C4D0060ECD2 /* sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = F45B99381F155BF60060ECD2 /* sprites.atlas */; };
 		F45B993A1F155C4E0060ECD2 /* sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = F45B99381F155BF60060ECD2 /* sprites.atlas */; };
 		F45B993B1F155C530060ECD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4A33C051F0E9ADD009F7CFC /* Assets.xcassets */; };
-		F45B993C1F155C6B0060ECD2 /* background1.png in Resources */ = {isa = PBXBuildFile; fileRef = F4A33C121F0E9C41009F7CFC /* background1.png */; };
-		F45B993D1F155C6B0060ECD2 /* background2.png in Resources */ = {isa = PBXBuildFile; fileRef = F4A33C131F0E9C41009F7CFC /* background2.png */; };
-		F45B993E1F155C6B0060ECD2 /* MainMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = F4A33C141F0E9C41009F7CFC /* MainMenu.png */; };
-		F45B993F1F155C6B0060ECD2 /* YouLose.png in Resources */ = {isa = PBXBuildFile; fileRef = F4A33C151F0E9C41009F7CFC /* YouLose.png */; };
-		F45B99401F155C6B0060ECD2 /* YouWin.png in Resources */ = {isa = PBXBuildFile; fileRef = F4A33C161F0E9C41009F7CFC /* YouWin.png */; };
-		F45B99411F155C720060ECD2 /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F45F2CBF1F14FCAD00BFE698 /* backgroundMusic.mp3 */; };
-		F45B99421F155C720060ECD2 /* hitCat.wav in Resources */ = {isa = PBXBuildFile; fileRef = F45F2CBE1F14FCAD00BFE698 /* hitCat.wav */; };
-		F45B99431F155C720060ECD2 /* hitCatLady.wav in Resources */ = {isa = PBXBuildFile; fileRef = F45F2CC01F14FCAE00BFE698 /* hitCatLady.wav */; };
-		F45B99441F155C720060ECD2 /* lose.wav in Resources */ = {isa = PBXBuildFile; fileRef = F45F2CBC1F14FCAD00BFE698 /* lose.wav */; };
-		F45B99451F155C720060ECD2 /* win.wav in Resources */ = {isa = PBXBuildFile; fileRef = F45F2CBD1F14FCAD00BFE698 /* win.wav */; };
 		F45B99461F155F410060ECD2 /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D1DCBC1F15449100DC72B2 /* MainMenuScene.swift */; };
 		F45B99471F155F460060ECD2 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D1DCB81F153AB400DC72B2 /* GameOverScene.swift */; };
 		F45B99481F155F490060ECD2 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A33BFE1F0E9ADD009F7CFC /* GameScene.swift */; };
 		F45B99491F155F4C0060ECD2 /* MyUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A33C1D1F0EA9F7009F7CFC /* MyUtils.swift */; };
 		F45B994A1F1560260060ECD2 /* Sprites.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D1DCBA1F15431800DC72B2 /* Sprites.swift */; };
-		F45F2CC11F14FCAE00BFE698 /* lose.wav in Resources */ = {isa = PBXBuildFile; fileRef = F45F2CBC1F14FCAD00BFE698 /* lose.wav */; };
-		F45F2CC21F14FCAE00BFE698 /* win.wav in Resources */ = {isa = PBXBuildFile; fileRef = F45F2CBD1F14FCAD00BFE698 /* win.wav */; };
-		F45F2CC31F14FCAE00BFE698 /* hitCat.wav in Resources */ = {isa = PBXBuildFile; fileRef = F45F2CBE1F14FCAD00BFE698 /* hitCat.wav */; };
-		F45F2CC41F14FCAE00BFE698 /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F45F2CBF1F14FCAD00BFE698 /* backgroundMusic.mp3 */; };
-		F45F2CC51F14FCAE00BFE698 /* hitCatLady.wav in Resources */ = {isa = PBXBuildFile; fileRef = F45F2CC01F14FCAE00BFE698 /* hitCatLady.wav */; };
 		F4A33BF91F0E9ADD009F7CFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A33BF81F0E9ADD009F7CFC /* AppDelegate.swift */; };
 		F4A33BFD1F0E9ADD009F7CFC /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = F4A33BFC1F0E9ADD009F7CFC /* Actions.sks */; };
 		F4A33BFF1F0E9ADD009F7CFC /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A33BFE1F0E9ADD009F7CFC /* GameScene.swift */; };
@@ -41,11 +46,6 @@
 		F4A33C041F0E9ADD009F7CFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4A33C021F0E9ADD009F7CFC /* Main.storyboard */; };
 		F4A33C061F0E9ADD009F7CFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4A33C051F0E9ADD009F7CFC /* Assets.xcassets */; };
 		F4A33C091F0E9ADD009F7CFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4A33C071F0E9ADD009F7CFC /* LaunchScreen.storyboard */; };
-		F4A33C181F0E9C41009F7CFC /* background1.png in Resources */ = {isa = PBXBuildFile; fileRef = F4A33C121F0E9C41009F7CFC /* background1.png */; };
-		F4A33C191F0E9C41009F7CFC /* background2.png in Resources */ = {isa = PBXBuildFile; fileRef = F4A33C131F0E9C41009F7CFC /* background2.png */; };
-		F4A33C1A1F0E9C41009F7CFC /* MainMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = F4A33C141F0E9C41009F7CFC /* MainMenu.png */; };
-		F4A33C1B1F0E9C41009F7CFC /* YouLose.png in Resources */ = {isa = PBXBuildFile; fileRef = F4A33C151F0E9C41009F7CFC /* YouLose.png */; };
-		F4A33C1C1F0E9C41009F7CFC /* YouWin.png in Resources */ = {isa = PBXBuildFile; fileRef = F4A33C161F0E9C41009F7CFC /* YouWin.png */; };
 		F4A33C1E1F0EA9F7009F7CFC /* MyUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A33C1D1F0EA9F7009F7CFC /* MyUtils.swift */; };
 		F4D1DCB91F153AB400DC72B2 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D1DCB81F153AB400DC72B2 /* GameOverScene.swift */; };
 		F4D1DCBB1F15431800DC72B2 /* Sprites.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D1DCBA1F15431800DC72B2 /* Sprites.swift */; };
@@ -53,6 +53,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E0C3EFC61F15BDC100630BC9 /* background1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background1.png; sourceTree = "<group>"; };
+		E0C3EFC71F15BDC100630BC9 /* background2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background2.png; sourceTree = "<group>"; };
+		E0C3EFC81F15BDC100630BC9 /* MainMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainMenu.png; sourceTree = "<group>"; };
+		E0C3EFC91F15BDC100630BC9 /* YouLose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YouLose.png; sourceTree = "<group>"; };
+		E0C3EFCA1F15BDC100630BC9 /* YouWin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YouWin.png; sourceTree = "<group>"; };
+		E0C3EFCC1F15BE0800630BC9 /* backgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundMusic.mp3; sourceTree = "<group>"; };
+		E0C3EFCD1F15BE0800630BC9 /* hitCat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hitCat.wav; sourceTree = "<group>"; };
+		E0C3EFCE1F15BE0800630BC9 /* hitCatLady.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hitCatLady.wav; sourceTree = "<group>"; };
+		E0C3EFCF1F15BE0800630BC9 /* lose.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lose.wav; sourceTree = "<group>"; };
+		E0C3EFD01F15BE0800630BC9 /* win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = win.wav; sourceTree = "<group>"; };
 		F45B991D1F155B210060ECD2 /* ZombieCongaMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZombieCongaMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F45B991F1F155B220060ECD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F45B99231F155B220060ECD2 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
@@ -61,11 +71,6 @@
 		F45B992E1F155B220060ECD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F45B992F1F155B220060ECD2 /* ZombieCongaMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ZombieCongaMac.entitlements; sourceTree = "<group>"; };
 		F45B99381F155BF60060ECD2 /* sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sprites.atlas; sourceTree = "<group>"; };
-		F45F2CBC1F14FCAD00BFE698 /* lose.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = lose.wav; path = "../../../../Desktop/iOS Games by Tutorials Second Edition/Chapter 3 - Actions/Resources/Sounds/lose.wav"; sourceTree = "<group>"; };
-		F45F2CBD1F14FCAD00BFE698 /* win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = win.wav; path = "../../../../Desktop/iOS Games by Tutorials Second Edition/Chapter 3 - Actions/Resources/Sounds/win.wav"; sourceTree = "<group>"; };
-		F45F2CBE1F14FCAD00BFE698 /* hitCat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = hitCat.wav; path = "../../../../Desktop/iOS Games by Tutorials Second Edition/Chapter 3 - Actions/Resources/Sounds/hitCat.wav"; sourceTree = "<group>"; };
-		F45F2CBF1F14FCAD00BFE698 /* backgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = backgroundMusic.mp3; path = "../../../../Desktop/iOS Games by Tutorials Second Edition/Chapter 3 - Actions/Resources/Sounds/backgroundMusic.mp3"; sourceTree = "<group>"; };
-		F45F2CC01F14FCAE00BFE698 /* hitCatLady.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = hitCatLady.wav; path = "../../../../Desktop/iOS Games by Tutorials Second Edition/Chapter 3 - Actions/Resources/Sounds/hitCatLady.wav"; sourceTree = "<group>"; };
 		F4A33BF51F0E9ADD009F7CFC /* Zombie Conga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zombie Conga.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4A33BF81F0E9ADD009F7CFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4A33BFC1F0E9ADD009F7CFC /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
@@ -75,11 +80,6 @@
 		F4A33C051F0E9ADD009F7CFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4A33C081F0E9ADD009F7CFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4A33C0A1F0E9ADD009F7CFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F4A33C121F0E9C41009F7CFC /* background1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background1.png; sourceTree = "<group>"; };
-		F4A33C131F0E9C41009F7CFC /* background2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background2.png; sourceTree = "<group>"; };
-		F4A33C141F0E9C41009F7CFC /* MainMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainMenu.png; sourceTree = "<group>"; };
-		F4A33C151F0E9C41009F7CFC /* YouLose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YouLose.png; sourceTree = "<group>"; };
-		F4A33C161F0E9C41009F7CFC /* YouWin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YouWin.png; sourceTree = "<group>"; };
 		F4A33C1D1F0EA9F7009F7CFC /* MyUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUtils.swift; sourceTree = "<group>"; };
 		F4D1DCB81F153AB400DC72B2 /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		F4D1DCBA1F15431800DC72B2 /* Sprites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sprites.swift; sourceTree = "<group>"; };
@@ -104,6 +104,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E0C3EFC51F15BDC100630BC9 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				E0C3EFC61F15BDC100630BC9 /* background1.png */,
+				E0C3EFC71F15BDC100630BC9 /* background2.png */,
+				E0C3EFC81F15BDC100630BC9 /* MainMenu.png */,
+				E0C3EFC91F15BDC100630BC9 /* YouLose.png */,
+				E0C3EFCA1F15BDC100630BC9 /* YouWin.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		E0C3EFCB1F15BE0800630BC9 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				E0C3EFCC1F15BE0800630BC9 /* backgroundMusic.mp3 */,
+				E0C3EFCD1F15BE0800630BC9 /* hitCat.wav */,
+				E0C3EFCE1F15BE0800630BC9 /* hitCatLady.wav */,
+				E0C3EFCF1F15BE0800630BC9 /* lose.wav */,
+				E0C3EFD01F15BE0800630BC9 /* win.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		F45B991E1F155B220060ECD2 /* ZombieCongaMac */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,23 +150,11 @@
 				F4D1DCBC1F15449100DC72B2 /* MainMenuScene.swift */,
 				F4A33C1D1F0EA9F7009F7CFC /* MyUtils.swift */,
 				F4A33C051F0E9ADD009F7CFC /* Assets.xcassets */,
-				F4A33C111F0E9C41009F7CFC /* Images */,
-				F45F2CBB1F14FC8200BFE698 /* Sounds */,
+				E0C3EFC51F15BDC100630BC9 /* Images */,
+				E0C3EFCB1F15BE0800630BC9 /* Sounds */,
 				F45B99381F155BF60060ECD2 /* sprites.atlas */,
 			);
 			name = Shared;
-			sourceTree = "<group>";
-		};
-		F45F2CBB1F14FC8200BFE698 /* Sounds */ = {
-			isa = PBXGroup;
-			children = (
-				F45F2CBF1F14FCAD00BFE698 /* backgroundMusic.mp3 */,
-				F45F2CBE1F14FCAD00BFE698 /* hitCat.wav */,
-				F45F2CC01F14FCAE00BFE698 /* hitCatLady.wav */,
-				F45F2CBC1F14FCAD00BFE698 /* lose.wav */,
-				F45F2CBD1F14FCAD00BFE698 /* win.wav */,
-			);
-			name = Sounds;
 			sourceTree = "<group>";
 		};
 		F4A33BEC1F0E9ADD009F7CFC = {
@@ -175,19 +187,6 @@
 				F4A33C0A1F0E9ADD009F7CFC /* Info.plist */,
 			);
 			path = "Zombie Conga";
-			sourceTree = "<group>";
-		};
-		F4A33C111F0E9C41009F7CFC /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				F4A33C121F0E9C41009F7CFC /* background1.png */,
-				F4A33C131F0E9C41009F7CFC /* background2.png */,
-				F4A33C141F0E9C41009F7CFC /* MainMenu.png */,
-				F4A33C151F0E9C41009F7CFC /* YouLose.png */,
-				F4A33C161F0E9C41009F7CFC /* YouWin.png */,
-			);
-			name = Images;
-			path = "../../../../Desktop/iOS Games by Tutorials Second Edition/Chapter 1 - Sprites/Resources/Images";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,19 +268,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F45B99441F155C720060ECD2 /* lose.wav in Resources */,
-				F45B99451F155C720060ECD2 /* win.wav in Resources */,
 				F45B993A1F155C4E0060ECD2 /* sprites.atlas in Resources */,
-				F45B993E1F155C6B0060ECD2 /* MainMenu.png in Resources */,
-				F45B99411F155C720060ECD2 /* backgroundMusic.mp3 in Resources */,
-				F45B99421F155C720060ECD2 /* hitCat.wav in Resources */,
-				F45B99431F155C720060ECD2 /* hitCatLady.wav in Resources */,
-				F45B993F1F155C6B0060ECD2 /* YouLose.png in Resources */,
+				E0C3EFD31F15BEDD00630BC9 /* MainMenu.png in Resources */,
 				F45B99241F155B220060ECD2 /* Actions.sks in Resources */,
-				F45B993D1F155C6B0060ECD2 /* background2.png in Resources */,
 				F45B993B1F155C530060ECD2 /* Assets.xcassets in Resources */,
-				F45B99401F155C6B0060ECD2 /* YouWin.png in Resources */,
-				F45B993C1F155C6B0060ECD2 /* background1.png in Resources */,
+				E0C3EFDE1F15BEE300630BC9 /* lose.wav in Resources */,
+				E0C3EFD11F15BEDD00630BC9 /* background1.png in Resources */,
+				E0C3EFD21F15BEDD00630BC9 /* background2.png in Resources */,
+				E0C3EFDF1F15BEE300630BC9 /* win.wav in Resources */,
+				E0C3EFD51F15BEDD00630BC9 /* YouWin.png in Resources */,
+				E0C3EFD41F15BEDD00630BC9 /* YouLose.png in Resources */,
+				E0C3EFDB1F15BEE300630BC9 /* backgroundMusic.mp3 in Resources */,
+				E0C3EFDD1F15BEE300630BC9 /* hitCatLady.wav in Resources */,
+				E0C3EFDC1F15BEE300630BC9 /* hitCat.wav in Resources */,
 				F45B992D1F155B220060ECD2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,19 +289,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4A33C1A1F0E9C41009F7CFC /* MainMenu.png in Resources */,
-				F4A33C1C1F0E9C41009F7CFC /* YouWin.png in Resources */,
-				F45F2CC31F14FCAE00BFE698 /* hitCat.wav in Resources */,
-				F4A33C181F0E9C41009F7CFC /* background1.png in Resources */,
-				F4A33C191F0E9C41009F7CFC /* background2.png in Resources */,
+				E0C3EFE01F15BEE400630BC9 /* backgroundMusic.mp3 in Resources */,
 				F4A33C041F0E9ADD009F7CFC /* Main.storyboard in Resources */,
-				F4A33C1B1F0E9C41009F7CFC /* YouLose.png in Resources */,
-				F45F2CC41F14FCAE00BFE698 /* backgroundMusic.mp3 in Resources */,
-				F45F2CC11F14FCAE00BFE698 /* lose.wav in Resources */,
+				E0C3EFD81F15BEDD00630BC9 /* MainMenu.png in Resources */,
+				E0C3EFE41F15BEE400630BC9 /* win.wav in Resources */,
+				E0C3EFE31F15BEE400630BC9 /* lose.wav in Resources */,
+				E0C3EFE11F15BEE400630BC9 /* hitCat.wav in Resources */,
+				E0C3EFE21F15BEE400630BC9 /* hitCatLady.wav in Resources */,
+				E0C3EFDA1F15BEDD00630BC9 /* YouWin.png in Resources */,
+				E0C3EFD61F15BEDD00630BC9 /* background1.png in Resources */,
+				E0C3EFD71F15BEDD00630BC9 /* background2.png in Resources */,
 				F4A33C061F0E9ADD009F7CFC /* Assets.xcassets in Resources */,
+				E0C3EFD91F15BEDD00630BC9 /* YouLose.png in Resources */,
 				F45B99391F155C4D0060ECD2 /* sprites.atlas in Resources */,
-				F45F2CC21F14FCAE00BFE698 /* win.wav in Resources */,
-				F45F2CC51F14FCAE00BFE698 /* hitCatLady.wav in Resources */,
 				F4A33C091F0E9ADD009F7CFC /* LaunchScreen.storyboard in Resources */,
 				F4A33BFD1F0E9ADD009F7CFC /* Actions.sks in Resources */,
 			);
@@ -546,6 +545,7 @@
 				F45B99311F155B220060ECD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F4A33BF01F0E9ADD009F7CFC /* Build configuration list for PBXProject "Zombie Conga" */ = {
 			isa = XCConfigurationList;

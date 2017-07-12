@@ -20,7 +20,6 @@ class GameScene: SKScene {
     
     var lastUpdateTime: TimeInterval = 0
     var dt: TimeInterval = 0
-    var lastTouchLocation: CGPoint?
     
     let zombieMovePointsPerSec: CGFloat = 480.0
     var velocity: CGPoint = .zero
@@ -30,8 +29,8 @@ class GameScene: SKScene {
     var lives = 2
     var gameOver = false
     
-    let catCollisionSound: SKAction = SKAction.playSoundFileNamed( "hitCat.wav", waitForCompletion: false)
-    let enemyCollisionSound: SKAction = SKAction.playSoundFileNamed( "hitCatLady.wav", waitForCompletion: false)
+    let catCollisionSound = SKAction.playSoundFileNamed("hitCat.wav", waitForCompletion: false)
+    let enemyCollisionSound = SKAction.playSoundFileNamed("hitCatLady.wav", waitForCompletion: false)
     
     override init(size: CGSize) {
         let maxAspectRatio:CGFloat = 16.0 / 9.0
@@ -96,7 +95,6 @@ class GameScene: SKScene {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
             let touchLocation = touch.location(in: backgroundLayer)
-            lastTouchLocation = touchLocation
             sceneTouched(touchLocation: touchLocation)
         }
     }
@@ -104,7 +102,6 @@ class GameScene: SKScene {
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
             let touchLocation = touch.location(in: backgroundLayer)
-            lastTouchLocation = touchLocation
             sceneTouched(touchLocation: touchLocation)
         }
     }
@@ -112,7 +109,6 @@ class GameScene: SKScene {
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
             let touchLocation = touch.location(in: backgroundLayer)
-            lastTouchLocation = touchLocation
         }
     }
     #else
@@ -125,11 +121,6 @@ class GameScene: SKScene {
         let touchLocation = theEvent.location(in: backgroundLayer)
         sceneTouched(touchLocation: touchLocation)
     }
-    
-    override func mouseUp(with theEvent: NSEvent) {
-        let touchLocation = theEvent.location(in: backgroundLayer)
-        lastTouchLocation = touchLocation
-    }
     #endif
     
     override func update(_ currentTime: TimeInterval) {
@@ -140,21 +131,9 @@ class GameScene: SKScene {
         }
         lastUpdateTime = currentTime
         
-        if let lastTouchLocation = lastTouchLocation {
-//            let offset = lastTouchLocation - zombie.position
-//            let distance = offset.length()
-//            if distance <= (CGFloat(dt) * zombieMovePointsPerSec) {
-//                zombie.position = lastTouchLocation
-//                velocity = .zero
-//                stopZombieAnimation()
-//            } else {
-                moveSprite(zombie, velocity: velocity)
-                rotateSprite(zombie, direction: velocity, rotateRadiansPerSec: zombieRotateRadiansPerSec)
-//            }
-        } else {
-            moveSprite(zombie, velocity: velocity)
-            rotateSprite(zombie, direction: velocity, rotateRadiansPerSec: zombieRotateRadiansPerSec)
-        }
+        moveSprite(zombie, velocity: velocity)
+        rotateSprite(zombie, direction: velocity, rotateRadiansPerSec: zombieRotateRadiansPerSec)
+        
         boundsCheckZombie()
         moveTrain()
         moveBackground()
